@@ -47,7 +47,7 @@ button {
 }
 
 button:active {
-  opacity: 0.6;
+  background-color: var(--button-purple);
 }
 
 .icon {

@@ -36,6 +36,7 @@ function calculator() {
 
   result.innerText = countResult
   input.value = ''
+  result.classList.remove('active')
 }
 
 function copyResult() {
