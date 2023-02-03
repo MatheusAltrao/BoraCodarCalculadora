@@ -42,6 +42,8 @@ button {
   justify-content: center;
 
   transition: all 0.3s ease;
+
+  user-select: none;
 }
 
 button:active {
@@ -92,18 +94,51 @@ input {
 
 #countOperation {
   font-size: 22px;
-
   height: 30px;
-
   opacity: 0.5;
+
+}
+
+header {
+  position: relative;
+}
+
+.copy {
+  position: absolute;
+  color: #fafafa;
+  cursor: pointer;
+  left: 0.5rem;
+  bottom: 0.5rem;
+
+  font-size: 22px;
+
+  transition: all 0.3s ease;
+
+}
+
+.copy.active {
+  color: var(--bg-color);
+}
+
+.copy:active {
+  opacity: 0.6;
 }
 
 #result {
   height: 40px;
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 2rem;
   color: #fff;
+  user-select: none;
+  width: 235px;
+  margin-left: auto;
+  overflow: scroll;
 
+  transition: all 0.3s ease;
+}
+
+#result.active {
+  color: var(--bg-color);
 }
 
 p {
