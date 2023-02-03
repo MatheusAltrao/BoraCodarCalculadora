@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #807ECE;
+  --bg-calculator: #2D2A37;
+  --button-purple: #462878;
+  --operation-calculator: #7F45E2;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+body {
+  background-color: var(--bg-color);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  border: none;
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2D2A37;
+
+  color: #fff;
+  font-size: 24px;
+
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+.icon {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.operation {
+  background-color: var(--operation-calculator);
+  font-weight: 300;
+}
+
+.color {
+  color: var(--operation-calculator);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 1rem;
+}
+
+.calculator {
+  background-color: var(--bg-calculator);
+  padding: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.9);
+}
+
+input {
+
+  width: 100%;
+
+  border: none;
+  background-color: transparent;
+  color: #fff;
+
+  text-align: right;
+}
+
+#countOperation {
+  font-size: 22px;
+
+  height: 30px;
+
+  opacity: 0.5;
+}
+
+#result {
+  height: 40px;
+  font-size: 36px;
+  margin-bottom: 2rem;
+  color: #fff;
+
+}
+
+p {
+  text-align: right;
+  color: #fff;
+  padding-right: 1rem;
+}
+
+.buttons {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.calculator {
+  animation: fromTop 0.5s ease backwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
