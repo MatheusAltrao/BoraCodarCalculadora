@@ -1,6 +1,7 @@
 let input = document.getElementById('countOperation')
 let result = document.getElementById('result')
 const copy = document.querySelector('.copy')
+const tooltip = document.querySelector('.tooltip')
 
 document.querySelectorAll('.charKey').forEach(function (charBtn) {
   charBtn.addEventListener('click', () => {
@@ -14,6 +15,7 @@ document.getElementById('clear').addEventListener('click', () => {
   result.innerText = ''
   copy.classList.remove('active')
   result.classList.remove('active')
+  tooltip.classList.remove('active')
 
 })
 
@@ -45,6 +47,7 @@ function copyResult() {
   } else {
     copy.classList.add('active')
     result.classList.add('active')
+    tooltip.classList.add('active')
   }
 
   navigator.clipboard.writeText(result.innerText);

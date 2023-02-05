@@ -50,11 +50,6 @@ button:active {
   background-color: var(--button-purple);
 }
 
-.icon {
-  font-weight: 700;
-  font-size: 22px;
-}
-
 .operation {
   background-color: var(--operation-calculator);
   font-weight: 300;
@@ -122,6 +117,27 @@ header {
 
 .copy:active {
   opacity: 0.6;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 12px;
+  font-size: 700;
+  top: 10px;
+  left: 0;
+
+
+
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.tooltip.active {
+  opacity: 1;
+  top: 0px;
 }
 
 #result {
