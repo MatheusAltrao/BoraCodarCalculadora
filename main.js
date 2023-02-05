@@ -38,7 +38,9 @@ function calculator() {
 
   result.innerText = countResult
   input.value = ''
+  copy.classList.remove('active')
   result.classList.remove('active')
+  tooltip.classList.remove('active')
 }
 
 function copyResult() {
